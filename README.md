@@ -14,13 +14,18 @@ data_structures_and_algorithms/
 ├── src/
 │   ├── main.odin
 │   │
-│   └── arrays_and_hashing/
-│       ├── contains_duplicate.odin
-│       ├── valid_anagram.odin
+│   ├── arrays_and_hashing/
+│   │   ├── contains_duplicate.odin
+│   │   ├── valid_anagram.odin
+│   │   └── problems.md
+│   │
+│   └── two_pointers/
+│       ├── valid_palindrome.odin
 │       └── problems.md
-│
+│       
 ├── tests/
 │   ├── test_arrays_and_hashing.odin
+│   ├── test_two_pointers.odin
 │   └── .gitignore
 │
 └── README.md
