@@ -16,6 +16,7 @@ data_structures_and_algorithms/
 │   │
 │   └── arrays_and_hashing/
 │       ├── contains_duplicate.odin
+│       ├── valid_anagram.odin
 │       └── problems.md
 │
 ├── tests/
