@@ -23,14 +23,19 @@ data_structures_and_algorithms/
 │   │   ├── valid_palindrome.odin
 │   │   └── problems.md
 │   │
-│   └── sliding_window/
-│       ├── best_time_to_buy_and_sell_stocks.odin
+│   ├── sliding_window/
+│   │   ├── best_time_to_buy_and_sell_stocks.odin
+│   │   └── problems.md
+│   │
+│   └── stack/
+│       ├── valid_parenthesis.odin
 │       └── problems.md
-│
+│   
 ├── tests/
 │   ├── test_arrays_and_hashing.odin
 │   ├── test_two_pointers.odin
 │   ├── test_sliding_window.odin
+│   ├── test_stack.odin
 │   └── .gitignore
 │
 └── README.md
