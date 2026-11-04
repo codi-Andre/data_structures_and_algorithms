@@ -27,15 +27,20 @@ data_structures_and_algorithms/
 │   │   ├── best_time_to_buy_and_sell_stocks.odin
 │   │   └── problems.md
 │   │
-│   └── stack/
-│       ├── valid_parenthesis.odin
+│   ├── stack/
+│   │   ├── valid_parenthesis.odin
+│   │   └── problems.md
+│   │
+│   └── binary_search/
+│       ├── binary_search.odin
 │       └── problems.md
 │   
 ├── tests/
 │   ├── test_arrays_and_hashing.odin
-│   ├── test_two_pointers.odin
+│   ├── test_binary_search.odin
 │   ├── test_sliding_window.odin
 │   ├── test_stack.odin
+│   ├── test_two_pointers.odin
 │   └── .gitignore
 │
 └── README.md
