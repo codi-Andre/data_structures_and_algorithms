@@ -31,13 +31,18 @@ data_structures_and_algorithms/
 │   │   ├── valid_parenthesis.odin
 │   │   └── problems.md
 │   │
-│   └── binary_search/
-│       ├── binary_search.odin
+│   ├── binary_search/
+│   │   ├── binary_search.odin
+│   │   └── problems.md
+│   │
+│   └── linked_list/
+│       ├── reverse_linked_list.odin
 │       └── problems.md
 │   
 ├── tests/
 │   ├── test_arrays_and_hashing.odin
 │   ├── test_binary_search.odin
+│   ├── test_linked_list.odin
 │   ├── test_sliding_window.odin
 │   ├── test_stack.odin
 │   ├── test_two_pointers.odin
