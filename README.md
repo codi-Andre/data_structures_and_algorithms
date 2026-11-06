@@ -35,8 +35,12 @@ data_structures_and_algorithms/
 │   │   ├── binary_search.odin
 │   │   └── problems.md
 │   │
-│   └── linked_list/
-│       ├── reverse_linked_list.odin
+│   ├── linked_list/
+│   │   ├── reverse_linked_list.odin
+│   │   └── problems.md
+│   │
+│   └── trees/
+│       ├── construct_binary_tree_from_preorder_and_inorder_traversal.odin
 │       └── problems.md
 │   
 ├── tests/
@@ -46,6 +50,7 @@ data_structures_and_algorithms/
 │   ├── test_sliding_window.odin
 │   ├── test_stack.odin
 │   ├── test_two_pointers.odin
+│   ├── test_trees.odin
 │   └── .gitignore
 │
 └── README.md
