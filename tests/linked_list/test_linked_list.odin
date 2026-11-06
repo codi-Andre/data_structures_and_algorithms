@@ -1,5 +1,6 @@
 package test_linked_list
 
+import "core:time"
 import "core:log"
 import "core:testing"
 import "../../src/linked_list"
@@ -14,6 +15,8 @@ test_list_node :: proc(t: ^testing.T) {
 		node.next = dummy
 		dummy = &node
 	}
+
+	testing.set_fail_timeout(t, 5 * time.Second)
 
 	testing.expect_value(t, list[0].val, 0)
 	testing.expect_value(t, list[0].next, nil)
@@ -40,6 +43,8 @@ test_reverse_linked_list :: proc(t: ^testing.T) {
 	}
 
 	reversed_list := linked_list.reverse_list(&list[3])
+
+	testing.set_fail_timeout(t, 5 * time.Second)
 
 	testing.expect_value(t, list[3].val, 3)
 	testing.expect_value(t, list[3].next, nil)
