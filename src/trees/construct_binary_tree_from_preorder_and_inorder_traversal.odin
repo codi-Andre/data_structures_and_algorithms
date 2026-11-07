@@ -28,5 +28,8 @@ build_tree :: proc(preorder, inorder: []int, allocator := context.allocator, loc
 			j += 1
 		}
 	}
+	if curr != nil {
+		curr.right = nil
+	}
 	return node.right
 }
