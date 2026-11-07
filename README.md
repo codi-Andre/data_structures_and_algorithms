@@ -16,8 +16,9 @@ data_structures_and_algorithms/
 │   │
 │   ├── arrays_and_hashing/
 │   │   ├── contains_duplicate.odin
-│   │   ├── valid_anagram.odin
+│   │   ├── group_anagrams.odin
 │   │   ├── two_sum.odin
+│   │   ├── valid_anagram.odin
 │   │   └── problems.md
 │   │
 │   ├── two_pointers/
