@@ -20,3 +20,10 @@ test_valid_anagram :: proc(t: ^testing.T) {
 	testing.expect_value(t, arrays_and_hashing.is_anagram("jar", "jam"), false)
 	testing.expect_value(t, arrays_and_hashing.is_anagram("x", "x"), true)
 }
+
+@(test)
+test_two_sum :: proc(t: ^testing.T) {
+	testing.expect_value(t, arrays_and_hashing.two_sum({3,4,5,6}, 7), {0,1})
+	testing.expect_value(t, arrays_and_hashing.two_sum({4,5,6}, 10), {0,2})
+	testing.expect_value(t, arrays_and_hashing.two_sum({5,5}, 10), {0,1})
+}
