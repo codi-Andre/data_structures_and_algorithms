@@ -65,3 +65,22 @@ test_top_k_frequent_elements :: proc(t: ^testing.T) {
 	testing.expect(t, slice.equal(output1[:], {3,2}), "Expect output1 to have 3 and 2") // order of ints matter for the test
 	testing.expect(t, slice.equal(output2[:], {7}), "Expect output2 to only the int 7")
 }
+
+@(test)
+test_encode_and_decode_strings :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+
+	input1, output1 := arrays_and_hashing.encode_and_decode([]string{"Hello","World"}), arrays_and_hashing.encode_and_decode("5#Hello5#World")
+	input2, output2 := arrays_and_hashing.encode_and_decode([]string{""}), arrays_and_hashing.encode_and_decode("")
+	defer {
+		delete(output1)
+		delete(output2)
+	}
+
+	testing.expect_value(t, input1, "5#Hello5#World")
+	testing.expect(t, slice.equal(output1[:], {"Hello","World"}), "Expect output1 to match the slice")
+
+	testing.expect_value(t, input2, "")
+	testing.expect(t, slice.equal(output2[:], {""}), "Expect output2 to match the empty slice")
+}

@@ -16,6 +16,7 @@ data_structures_and_algorithms/
 │   │
 │   ├── arrays_and_hashing/
 │   │   ├── contains_duplicate.odin
+│   │   ├── encode_and_decode_strings.odin
 │   │   ├── group_anagrams.odin
 │   │   ├── top_k_frequent_elements.odin
 │   │   ├── two_sum.odin
