@@ -1,5 +1,7 @@
 # Arrays and hashing problems
 
+
+
 ## Contains Duplicate (easy)
 
 Given an integer array `nums`, return `true` if any value appears more than once in the array, otherwise return `false`.
@@ -28,6 +30,8 @@ Constraints:
 Recommended Time & Space Complexity:
 
 You should aim for a solution with `O(n)` time and `O(n)` space, where `n` is the size of the input array.
+
+
 
 ## Valid Anagram (easy)
 
@@ -68,6 +72,7 @@ Constraints:
 Recommended Time & Space Complexity:
 
 You should aim for a solution with `O(n + m)` time and `O(1)` space, where `n` is the length of the string `s` and `m` is the length of the string `t`.
+
 
 
 ## Two Sum (easy)
@@ -115,6 +120,8 @@ Recommended Time & Space Complexity:
 
 You should aim for a solution with `O(n)` time and `O(n)` space, where n is the size of the input array.
 
+
+
 ## Group Anagrams (medium)
 
 Given an array of strings `strs`, group all anagrams together into sublists. You may return the output in any order.
@@ -155,6 +162,8 @@ Recommended Time & Space Complexity:
 
 You should aim for a solution with `O(m * n)` time and `O(m)` space, where `m` is the number of strings and `n` is the length of the longest string.
 
+
+
 ## Top K Frequent Elements (medium)
 
 Given an integer array `nums` and an integer `k`, return the `k` most frequent elements within the array.
@@ -188,6 +197,8 @@ Constraints:
 Recommended Time & Space Complexity:
 
 You should aim for a solution with `O(n)` time and `O(n)` space, where `n` is the size of the input array.
+
+
 
 ## Encode and Decode Strings (medium)
 
@@ -263,3 +274,39 @@ Constraints:
 Recommended Time & Space Complexity:
 
 You should aim for a solution with `O(m)` time for each `encode()` and `decode()` call and `O(m+n)` space, where `m` is the sum of lengths of all the strings and `n` is the number of strings.
+
+
+
+## Products of Array Except Self (medium)
+
+Given an integer array `nums`, return an array `output` where `output[i]` is the product of all the elements of `nums` except `nums[i]`.
+
+Each product is guaranteed to fit in a 32-bit integer.
+
+Follow-up: Could you solve it in O(n) time without using the division operation?
+
+Example 1:
+
+```
+Input: nums = [1,2,4,6]
+
+Output: [48,24,12,8]
+```
+
+Example 2:
+
+```
+Input: nums = [-1,0,1,2,3]
+
+Output: [0,-6,0,0,0]
+```
+
+Constraints:
+
+- `2 <= nums.length <= 100,000`
+- `-30 <= nums[i] <= 30`
+- The product of any prefix or suffix of `nums` is guaranteed to fit in a 32-bit integer.
+
+Recommended Time & Space Complexity:
+
+You should aim for a solution as good or better than `O(n)` time and `O(n)` space, where `n` is the size of the input array.

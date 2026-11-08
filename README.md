@@ -18,6 +18,7 @@ data_structures_and_algorithms/
 │   │   ├── contains_duplicate.odin
 │   │   ├── encode_and_decode_strings.odin
 │   │   ├── group_anagrams.odin
+│   │   ├── products_of_array_except_self.odin
 │   │   ├── top_k_frequent_elements.odin
 │   │   ├── two_sum.odin
 │   │   ├── valid_anagram.odin

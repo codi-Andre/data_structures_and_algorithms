@@ -84,3 +84,18 @@ test_encode_and_decode_strings :: proc(t: ^testing.T) {
 	testing.expect_value(t, input2, "")
 	testing.expect(t, slice.equal(output2[:], {""}), "Expect output2 to match the empty slice")
 }
+
+@(test)
+test_products_of_array_except_self :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	output1 := arrays_and_hashing.products_of_array_except_self({1,2,4,6})
+	output2 := arrays_and_hashing.products_of_array_except_self({-1,0,1,2,3})
+	defer {
+		delete(output1)
+		delete(output2)
+	}
+
+	testing.expect(t, slice.equal(output1[:], {48,24,12,8}), "Expect output1 to equal expected slice")
+	testing.expect(t, slice.equal(output2[:], {0,-6,0,0,0}), "Expect output2 to equal expected slice")
+}
