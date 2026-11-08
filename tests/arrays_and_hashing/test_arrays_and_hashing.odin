@@ -54,3 +54,14 @@ test_group_anagrams :: proc(t: ^testing.T) {
 	testing.expect(t, slice.equal(output2[0][:], []string{"x"}), "Expect output2 to return one group with a letter x")
 	testing.expect(t, slice.equal(output3[0][:], []string{""}), "Expect output3 to return a empty string group")
 }
+
+@(test)
+test_top_k_frequent_elements :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	output1 := arrays_and_hashing.top_k_frequent_elements({1,2,2,3,3,3}, 2)
+	output2 := arrays_and_hashing.top_k_frequent_elements({7,7}, 1)
+
+	testing.expect(t, slice.equal(output1[:], {3,2}), "Expect output1 to have 3 and 2") // order of ints matter for the test
+	testing.expect(t, slice.equal(output2[:], {7}), "Expect output2 to only the int 7")
+}

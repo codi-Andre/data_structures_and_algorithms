@@ -17,6 +17,7 @@ data_structures_and_algorithms/
 │   ├── arrays_and_hashing/
 │   │   ├── contains_duplicate.odin
 │   │   ├── group_anagrams.odin
+│   │   ├── top_k_frequent_elements.odin
 │   │   ├── two_sum.odin
 │   │   ├── valid_anagram.odin
 │   │   └── problems.md
