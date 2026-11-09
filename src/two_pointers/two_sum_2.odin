@@ -1,5 +1,7 @@
 package two_pointers
 
+// Time complexity: O(n) | Space complexity: O(1)
+
 two_sum_2 :: proc(numbers: []int, target: int) -> [2]int {
 	l, r := 0, len(numbers) - 1
 	for l < r {
