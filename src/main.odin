@@ -21,7 +21,9 @@ main :: proc() {
 	}
 
 	ints := make([]int, 10)
+	val := '1' - '1'
 
 	fmt.printfln("Hello world!")
 	fmt.printfln("%v", ints)
+	fmt.printfln("%d", val)
 }

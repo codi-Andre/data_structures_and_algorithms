@@ -99,3 +99,32 @@ test_products_of_array_except_self :: proc(t: ^testing.T) {
 	testing.expect(t, slice.equal(output1[:], {48,24,12,8}), "Expect output1 to equal expected slice")
 	testing.expect(t, slice.equal(output2[:], {0,-6,0,0,0}), "Expect output2 to equal expected slice")
 }
+
+@(test)
+test_valid_sudoku :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect(t, arrays_and_hashing.is_valid_sudoku(
+		{{'1','2','.','.','3','.','.','.','.'},
+		 {'4','.','.','5','.','.','.','.','.'},
+		 {'.','9','8','.','.','.','.','.','3'},
+		 {'5','.','.','.','6','.','.','.','4'},
+		 {'.','.','.','8','.','3','.','.','5'},
+		 {'7','.','.','.','2','.','.','.','6'},
+		 {'.','.','.','.','.','.','2','.','.'},
+		 {'.','.','.','4','1','9','.','.','8'},
+		 {'.','.','.','.','8','.','.','7','9'}}
+	) == true, "Expect board to be valid")
+
+	testing.expect(t, arrays_and_hashing.is_valid_sudoku(
+		{{'1','2','.','.','3','.','.','.','.'},
+		 {'4','.','.','5','.','.','.','.','.'},
+		 {'.','9','1','.','.','.','.','.','3'},
+		 {'5','.','.','.','6','.','.','.','4'},
+		 {'.','.','.','8','.','3','.','.','5'},
+		 {'7','.','.','.','2','.','.','.','6'},
+		 {'.','.','.','.','.','.','2','.','.'},
+		 {'.','.','.','4','1','9','.','.','8'},
+		 {'.','.','.','.','8','.','.','7','9'}}
+	) == false, "Expect board to not be valid")
+}

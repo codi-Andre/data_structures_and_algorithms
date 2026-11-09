@@ -22,6 +22,7 @@ data_structures_and_algorithms/
 │   │   ├── top_k_frequent_elements.odin
 │   │   ├── two_sum.odin
 │   │   ├── valid_anagram.odin
+│   │   ├── valid_sudoku.odin
 │   │   └── problems.md
 │   │
 │   ├── two_pointers/
