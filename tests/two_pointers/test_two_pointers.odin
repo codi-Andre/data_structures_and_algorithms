@@ -15,3 +15,10 @@ test_valid_palindrome :: proc(t: ^testing.T) {
 	testing.expect_value(t, two_pointers.is_palindrome(",,a"), true)
 	testing.expect_value(t, two_pointers.is_palindrome("ab,,a"), true)
 }
+
+@(test)
+test_two_sum_2 :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, two_pointers.two_sum_2({1,2,3,4}, 3), {1,2})
+}

@@ -27,6 +27,7 @@ data_structures_and_algorithms/
 │   │   └── problems.md
 │   │
 │   ├── two_pointers/
+│   │   ├── two_sum_2.odin
 │   │   ├── valid_palindrome.odin
 │   │   └── problems.md
 │   │
