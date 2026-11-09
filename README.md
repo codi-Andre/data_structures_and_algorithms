@@ -18,6 +18,7 @@ data_structures_and_algorithms/
 │   │   ├── contains_duplicate.odin
 │   │   ├── encode_and_decode_strings.odin
 │   │   ├── group_anagrams.odin
+│   │   ├── longest_consecutive_sequence.odin
 │   │   ├── products_of_array_except_self.odin
 │   │   ├── top_k_frequent_elements.odin
 │   │   ├── two_sum.odin
@@ -55,8 +56,8 @@ data_structures_and_algorithms/
 │   ├── test_linked_list.odin
 │   ├── test_sliding_window.odin
 │   ├── test_stack.odin
-│   ├── test_two_pointers.odin
 │   ├── test_trees.odin
+│   ├── test_two_pointers.odin
 │   └── .gitignore
 │
 └── README.md

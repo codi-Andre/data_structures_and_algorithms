@@ -128,3 +128,11 @@ test_valid_sudoku :: proc(t: ^testing.T) {
 		 {'.','.','.','.','8','.','.','7','9'}}
 	) == false, "Expect board to not be valid")
 }
+
+@(test)
+test_longest_consecutive_sequence :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, arrays_and_hashing.longest_consecutive_sequence({2,20,4,10,3,4,5}), 4)
+	testing.expect_value(t, arrays_and_hashing.longest_consecutive_sequence({0,3,2,5,4,6,1,1}), 7)
+}
