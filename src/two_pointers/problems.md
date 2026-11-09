@@ -121,3 +121,50 @@ Constraints:
 Recommended Time & Space Complexity:
 
 You should aim for a solution with `O(n^2)` time and `O(1)` auxiliary space, plus the space used by the sorting algorithm, where `n` is the size of the input array. This excludes the space used for the output list.
+
+
+
+## Container With Most Water (medium)
+
+You are given an integer array `heights` where `heights[i]` represents the height of the `i`th bar.
+
+You may choose any two bars to form a container. Return the maximum amount of water a container can store.
+
+
+Example 1:
+
+```
+ 8 |
+ 7 |      🟩              ⬛
+ 6 |      🟩🟦🟦🟦🟦🟦🟦🟦⬛🟦🟦🟦🟩
+ 5 |      🟩🟦🟦🟦⬛🟦🟦🟦⬛🟦🟦🟦🟩
+ 4 |      🟩🟦🟦🟦⬛🟦⬛🟦⬛🟦🟦🟦🟩
+ 3 |      🟩🟦🟦🟦⬛🟦⬛🟦⬛🟦⬛🟦🟩
+ 2 |      🟩🟦⬛🟦⬛🟦⬛🟦⬛🟦⬛🟦🟩
+ 1 |  ⬛  🟩🟦⬛🟦⬛🟦⬛🟦⬛🟦⬛🟦🟩
+ 0 |_________________________________
+
+Input: height = [1,7,2,5,4,7,3,6]
+
+Output: 36
+```
+
+Explanation: The bars at indices `1` and `7` have heights `7` and `6`. The container has width `7 - 1 = 6` and height `min(7, 6) = 6`, so it can store `6 * 6 = 36` units of water. This is the maximum possible area.
+
+
+Example 2:
+
+```
+Input: height = [2,2,2]
+
+Output: 4
+```
+
+Constraints:
+
+- `2 <= height.length <= 100,000`
+- `0 <= height[i] <= 10,000`
+
+Recommended Time & Space Complexity:
+
+You should aim for a solution with `O(n)` time and `O(1)` space, where `n` is the size of the input array.

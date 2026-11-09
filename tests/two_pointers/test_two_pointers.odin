@@ -46,3 +46,11 @@ test_three_sum :: proc(t: ^testing.T) {
 	testing.expect_value(t, slice.equal(output3[0][:], {0,0,0}), true)
 	testing.expect_value(t, len(output4), 6)
 }
+
+@(test)
+test_container_with_most_water :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, two_pointers.container_with_most_water({1,7,2,5,4,7,3,6}), 36)
+	testing.expect_value(t, two_pointers.container_with_most_water({2,2,2}), 4)
+}
