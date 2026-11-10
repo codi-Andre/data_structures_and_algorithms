@@ -168,3 +168,34 @@ Constraints:
 Recommended Time & Space Complexity:
 
 You should aim for a solution with `O(n)` time and `O(1)` space, where `n` is the size of the input array.
+
+
+
+## Trapping Rain Water (hard)
+
+You are given an array of non-negative integers `height` which represent an elevation map. Each value `height[i]` represents the height of a bar, which has a width of `1`.
+
+Return the total amount of water that can be trapped between the bars.
+
+
+Example 1:
+
+ 3 |      ⬛🟦🟦🟦⬛
+ 2 |  ⬛🟦⬛🟦🟦🟦⬛⬛
+ 1 |  ⬛🟦⬛⬛🟦⬛⬛⬛⬛
+ 0 |_______________________
+
+```
+Input: height = [0,2,0,3,1,0,1,3,2,1]
+
+Output: 9
+```
+
+Constraints:
+
+- `1 <= height.length <= 20,000`
+- `0 <= height[i] <= 100,000`
+
+Recommended Time & Space Complexity:
+
+You should aim for a solution as good or better than `O(n)` time and `O(n)` space, where `n` is the size of the input array.

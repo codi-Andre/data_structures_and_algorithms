@@ -54,3 +54,10 @@ test_container_with_most_water :: proc(t: ^testing.T) {
 	testing.expect_value(t, two_pointers.container_with_most_water({1,7,2,5,4,7,3,6}), 36)
 	testing.expect_value(t, two_pointers.container_with_most_water({2,2,2}), 4)
 }
+
+@(test)
+test_trapping_rain_water :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, two_pointers.trapping_rain_water({0,2,0,3,1,0,1,3,2,1}), 9)
+}

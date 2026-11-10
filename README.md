@@ -29,6 +29,7 @@ data_structures_and_algorithms/
 │   ├── two_pointers/
 │   │   ├── container_with_most_water.odin
 │   │   ├── three_sum.odin
+│   │   ├── trapping_rain_water.odin
 │   │   ├── two_sum_2.odin
 │   │   ├── valid_palindrome.odin
 │   │   └── problems.md
