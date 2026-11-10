@@ -22,3 +22,11 @@ test_longest_substring_without_repeating_characters :: proc(t: ^testing.T) {
 	testing.expect_value(t, sliding_window.length_of_longest_substring(" "), 1)
 	testing.expect_value(t, sliding_window.length_of_longest_substring("tmmzuxt"), 5)
 }
+
+@(test)
+test_longest_repeating_character_replacement :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, sliding_window.longest_repeating_character_replacement("XYYX", 2), 4)
+	testing.expect_value(t, sliding_window.longest_repeating_character_replacement("AAABABB", 1), 5)
+}

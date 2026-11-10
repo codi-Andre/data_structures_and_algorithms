@@ -36,6 +36,7 @@ data_structures_and_algorithms/
 │   │
 │   ├── sliding_window/
 │   │   ├── best_time_to_buy_and_sell_stocks.odin
+│   │   ├── longest_repeating_character_replacement.odin
 │   │   ├── longest_substring_without_repeating_characters.odin
 │   │   └── problems.md
 │   │
