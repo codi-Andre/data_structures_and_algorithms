@@ -22,8 +22,11 @@ main :: proc() {
 
 	ints := make([]int, 10)
 	val := '1' - '1'
+	integer: int
+	set: bit_set['a'..='z']
 
-	fmt.printfln("Hello world!")
+	fmt.println("Hello world!")
 	fmt.printfln("%v", ints)
 	fmt.printfln("%d", val)
+	fmt.println(size_of(set))
 }
