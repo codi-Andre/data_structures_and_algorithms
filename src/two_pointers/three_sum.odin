@@ -4,7 +4,11 @@ import "core:slice"
 
 // Time complexity: O(n²) | Auxiliary space complexity: O(1)
 
-three_sum :: proc(nums: []int, allocator := context.allocator, loc := #caller_location) -> [dynamic][3]int {
+three_sum :: proc(
+	nums: []int,
+	allocator := context.allocator,
+	loc := #caller_location,
+) -> [dynamic][3]int {
 	triples := make([dynamic][3]int, allocator, loc)
 	slice.sort(nums)
 
@@ -23,7 +27,7 @@ three_sum :: proc(nums: []int, allocator := context.allocator, loc := #caller_lo
 				append(&triples, [3]int{nums[i], nums[j], nums[k]})
 				j += 1
 				k -= 1
-				for j < k && nums[j] == nums[j -1] do j += 1
+				for j < k && nums[j] == nums[j - 1] do j += 1
 			}
 		}
 	}

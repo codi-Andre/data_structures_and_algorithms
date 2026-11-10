@@ -1,10 +1,10 @@
 package test_trees
 
-import "core:time"
-import "core:log"
-import "core:testing"
 import "../../src/trees"
+import "core:log"
 import vm "core:mem/virtual"
+import "core:testing"
+import "core:time"
 
 @(test)
 test_construct_binary_tree_from_preorder_and_inorder_traversal :: proc(t: ^testing.T) {
@@ -14,7 +14,7 @@ test_construct_binary_tree_from_preorder_and_inorder_traversal :: proc(t: ^testi
 	arena_allocator := vm.arena_allocator(&tree_arena)
 	defer vm.arena_destroy(&tree_arena)
 
-	root := trees.build_tree({1,2,3,4}, {2,1,3,4}, arena_allocator)
+	root := trees.build_tree({1, 2, 3, 4}, {2, 1, 3, 4}, arena_allocator)
 
 	testing.expect(t, root != nil, "Expect root to not be nil")
 	testing.expect_value(t, root.val, 1)

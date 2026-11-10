@@ -7,7 +7,7 @@ import "core:container/queue"
 // Time complexity: O(n) | Space complexity: O(n)
 
 is_valid_parenthesis :: proc(s: string) -> bool {
-	pairs := map[rune]rune{
+	pairs := map[rune]rune {
 		')' = '(',
 		']' = '[',
 		'}' = '{',

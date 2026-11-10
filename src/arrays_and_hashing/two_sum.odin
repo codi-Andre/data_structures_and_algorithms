@@ -9,9 +9,9 @@ two_sum :: proc(nums: []int, target: int) -> [2]int {
 	for num, i in nums {
 		sum := target - num
 		if sum in set {
-			return [2]int{set[sum],i}
+			return [2]int{set[sum], i}
 		}
 		set[num] = i
 	}
-	return [2]int{-1,-1}
+	return [2]int{-1, -1}
 }

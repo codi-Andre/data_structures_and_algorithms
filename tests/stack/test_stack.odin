@@ -1,8 +1,8 @@
 package test_stack
 
-import "core:time"
-import "core:testing"
 import "../../src/stack"
+import "core:testing"
+import "core:time"
 
 @(test)
 test_valid_parenthesis :: proc(t: ^testing.T) {

@@ -11,8 +11,8 @@ two_sum_2 :: proc(numbers: []int, target: int) -> [2]int {
 		} else if sum < target {
 			l += 1
 		} else {
-			return {l+1,r+1}
+			return {l + 1, r + 1}
 		}
 	}
-	return {-1,-1}
+	return {-1, -1}
 }

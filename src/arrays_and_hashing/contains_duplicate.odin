@@ -9,7 +9,7 @@ has_duplicate :: proc(nums: []int) -> bool {
 
 	for num in nums {
 		if num in set do return true
-		set[num]= {}
+		set[num] = {}
 	}
 	return false
 }

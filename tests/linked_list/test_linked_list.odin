@@ -1,9 +1,9 @@
 package test_linked_list
 
-import "core:time"
+import "../../src/linked_list"
 import "core:log"
 import "core:testing"
-import "../../src/linked_list"
+import "core:time"
 
 @(test)
 test_list_node :: proc(t: ^testing.T) {

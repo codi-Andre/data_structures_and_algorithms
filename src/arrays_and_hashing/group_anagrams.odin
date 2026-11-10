@@ -2,7 +2,11 @@ package arrays_and_hashing
 
 // Time complexity: O(m * n) | Space complexity: O(m)
 
-group_anagrams :: proc(strs: []string, allocator := context.allocator, loc := #caller_location) -> [dynamic][dynamic]string {
+group_anagrams :: proc(
+	strs: []string,
+	allocator := context.allocator,
+	loc := #caller_location,
+) -> [dynamic][dynamic]string {
 	anagrams := make([dynamic][dynamic]string, allocator, loc)
 	groups := make(map[[26]int][dynamic]string)
 	defer delete(groups)

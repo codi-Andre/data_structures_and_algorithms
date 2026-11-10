@@ -1,7 +1,7 @@
 package main
 
-import "core:mem"
 import "core:fmt"
+import "core:mem"
 
 main :: proc() {
 	when ODIN_DEBUG {
@@ -23,7 +23,7 @@ main :: proc() {
 	ints := make([]int, 10)
 	val := '1' - '1'
 	integer: int
-	set: bit_set['a'..='z']
+	set: bit_set['a' ..= 'z']
 
 	fmt.println("Hello world!")
 	fmt.printfln("%v", ints)
