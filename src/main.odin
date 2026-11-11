@@ -24,9 +24,11 @@ main :: proc() {
 	val := '1' - '1'
 	integer: int
 	set: bit_set['a' ..= 'z']
+	set2: bit_set['a' ..= 'z']
+	set2 += {'a'}
 
 	fmt.println("Hello world!")
 	fmt.printfln("%v", ints)
 	fmt.printfln("%d", val)
-	fmt.println(size_of(set))
+	fmt.println(set == set2)
 }

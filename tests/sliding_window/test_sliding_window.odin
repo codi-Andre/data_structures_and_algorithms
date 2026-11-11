@@ -34,3 +34,11 @@ test_longest_repeating_character_replacement :: proc(t: ^testing.T) {
 		5,
 	)
 }
+
+@(test)
+test_permutation_in_string :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, sliding_window.permutation_in_string("abc", "lecabee"), true)
+	testing.expect_value(t, sliding_window.permutation_in_string("abc", "lecaabee"), false)
+}
