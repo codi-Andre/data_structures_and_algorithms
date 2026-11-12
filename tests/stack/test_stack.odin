@@ -1,6 +1,7 @@
 package test_stack
 
 import "../../src/stack"
+import "core:slice"
 import "core:testing"
 import "core:time"
 
@@ -42,4 +43,19 @@ test_evaluate_reverse_polish_notation :: proc(t: ^testing.T) {
 		stack.evaluate_reverse_polish_notation({"1", "2", "+", "3", "*", "4", "-"}),
 		5,
 	)
+}
+
+@(test)
+test_daily_temperatures :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	output1 := stack.daily_temperatures({30, 38, 30, 36, 35, 40, 28})
+	output2 := stack.daily_temperatures({22, 21, 20})
+	defer {
+		delete(output1)
+		delete(output2)
+	}
+
+	testing.expect(t, slice.equal(output1[:], {1, 4, 1, 2, 1, 0, 0}))
+	testing.expect(t, slice.equal(output2[:], {0, 0, 0}))
 }
