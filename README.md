@@ -44,6 +44,7 @@ data_structures_and_algorithms/
 │   │   └── problems.md
 │   │
 │   ├── stack/
+│   │   ├── min_stack.odin
 │   │   ├── valid_parenthesis.odin
 │   │   └── problems.md
 │   │
