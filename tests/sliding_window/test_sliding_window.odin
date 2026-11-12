@@ -42,3 +42,17 @@ test_permutation_in_string :: proc(t: ^testing.T) {
 	testing.expect_value(t, sliding_window.permutation_in_string("abc", "lecabee"), true)
 	testing.expect_value(t, sliding_window.permutation_in_string("abc", "lecaabee"), false)
 }
+
+@(test)
+test_minimum_window_substring :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, sliding_window.minimum_window_substring("OUZODYXAZV", "XYZ"), "YXAZ")
+	testing.expect_value(t, sliding_window.minimum_window_substring("xyz", "xyz"), "xyz")
+	testing.expect_value(t, sliding_window.minimum_window_substring("x", "xy"), "")
+	testing.expect_value(
+		t,
+		sliding_window.minimum_window_substring("cabwefgewcwaefgcf", "cae"),
+		"cwae",
+	)
+}
