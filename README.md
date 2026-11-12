@@ -40,6 +40,7 @@ data_structures_and_algorithms/
 │   │   ├── longest_substring_without_repeating_characters.odin
 │   │   ├── minimum_window_substring.odin
 │   │   ├── permutation_in_string.odin
+│   │   ├── sliding_window_maximum.odin
 │   │   └── problems.md
 │   │
 │   ├── stack/

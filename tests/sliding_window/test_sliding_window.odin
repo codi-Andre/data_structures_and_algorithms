@@ -1,6 +1,7 @@
 package test_sliding_window
 
 import "../../src/sliding_window"
+import "core:slice"
 import "core:testing"
 import "core:time"
 
@@ -55,4 +56,14 @@ test_minimum_window_substring :: proc(t: ^testing.T) {
 		sliding_window.minimum_window_substring("cabwefgewcwaefgcf", "cae"),
 		"cwae",
 	)
+}
+
+@(test)
+test_sliding_window_maximum :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	output := sliding_window.max_sliding_window({1, 2, 1, 0, 4, 2, 6}, 3)
+	defer delete(output)
+
+	testing.expect(t, slice.equal(output[:], {2, 2, 4, 4, 6}), "Expect output to match slice")
 }
