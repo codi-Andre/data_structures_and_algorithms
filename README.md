@@ -44,6 +44,7 @@ data_structures_and_algorithms/
 │   │   └── problems.md
 │   │
 │   ├── stack/
+│   │   ├── evaluate_reverse_polish_notation.odin
 │   │   ├── min_stack.odin
 │   │   ├── valid_parenthesis.odin
 │   │   └── problems.md

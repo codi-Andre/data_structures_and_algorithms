@@ -32,3 +32,14 @@ test_min_stack :: proc(t: ^testing.T) {
 	testing.expect_value(t, stack.top(&s), 2)
 	testing.expect_value(t, stack.get_min(&s), 1)
 }
+
+@(test)
+test_evaluate_reverse_polish_notation :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(
+		t,
+		stack.evaluate_reverse_polish_notation({"1", "2", "+", "3", "*", "4", "-"}),
+		5,
+	)
+}
