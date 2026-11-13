@@ -54,6 +54,7 @@ data_structures_and_algorithms/
 │   │
 │   ├── binary_search/
 │   │   ├── binary_search.odin
+│   │   ├── search_a_2d_matrix.odin
 │   │   └── problems.md
 │   │
 │   ├── linked_list/
