@@ -59,3 +59,12 @@ test_daily_temperatures :: proc(t: ^testing.T) {
 	testing.expect(t, slice.equal(output1[:], {1, 4, 1, 2, 1, 0, 0}))
 	testing.expect(t, slice.equal(output2[:], {0, 0, 0}))
 }
+
+@(test)
+test_car_fleet :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, stack.car_fleet(10, {1, 4}, {3, 2}), 1)
+	testing.expect_value(t, stack.car_fleet(10, {4, 1, 0, 7}, {2, 2, 1, 1}), 3)
+	testing.expect_value(t, stack.car_fleet(10, {6, 8}, {3, 2}), 2)
+}
