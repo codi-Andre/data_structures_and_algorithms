@@ -202,3 +202,72 @@ Constraints:
 Recommended Time & Space Complexity:
 
 You should aim for a solution with `O(n log n)` time and `O(n)` space, where `n` is the size of the input array.
+
+
+
+## Largest Rectangle In Histogram (hard)
+
+You are given an array of integers `heights` where `heights[i]` represents the height of a bar. The width of each bar is `1`.
+
+Return the area of the largest rectangle that can be formed among the bars.
+
+> Note: This chart is known as a histogram.
+
+
+Example 1:
+
+```
+┌───┐   ┌───┐                           
+│ 7 │   │ 7 │                          
+├───┤   ├───┤                         
+│   │   │   │             
+├───┤   ├───┤             
+│   │   │   │             
+├───┤   ├───┤       ┌───┐ 
+│   │   │   │       │ 4 │ 
+├───┤   ├───┤       ├───┤ 
+│   │   │   │       │   │ 
+├───┤   ├───┼───┬───├───┤ 
+│   │   │   │ 2 │ 2 │   │ 
+├───┼───┼───┼───┼───┼───┤ 
+│   │ 1 │   │   │   │   │ 
+└───┴───┴───┴───┴───┴───┘
+ 
+
+Input: heights = [7,1,7,2,2,4]
+
+Output: 8
+```
+
+Example 2:
+
+```
+        ┌───┐                           
+        │ 7 │                          
+        ├───┤                         
+        │   │             
+        ├───┤             
+        │   │             
+        ├───┤
+        │   │
+    ┌───├───┤
+    │ 3 │   │
+    ├───┼───┤
+    │   │   │
+┌───┼───┼───┤
+│ 1 │   │   │
+└───┴───┴───┘
+
+Input: heights = [1,3,7]
+
+Output: 7
+```
+
+Constraints:
+
+- `1 <= heights.length <= 100,000`.
+- `0 <= heights[i] <= 10,000`
+
+Recommended Time & Space Complexity:
+
+You should aim for a solution with `O(n)` time and `O(n)` space, where `n` is the size of the input array.

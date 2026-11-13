@@ -47,6 +47,7 @@ data_structures_and_algorithms/
 │   │   ├── car_fleet.odin
 │   │   ├── daily_temperatures.odin
 │   │   ├── evaluate_reverse_polish_notation.odin
+│   │   ├── largest_rectangle_in_histogram.odin
 │   │   ├── min_stack.odin
 │   │   ├── valid_parenthesis.odin
 │   │   └── problems.md

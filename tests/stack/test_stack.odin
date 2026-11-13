@@ -68,3 +68,11 @@ test_car_fleet :: proc(t: ^testing.T) {
 	testing.expect_value(t, stack.car_fleet(10, {4, 1, 0, 7}, {2, 2, 1, 1}), 3)
 	testing.expect_value(t, stack.car_fleet(10, {6, 8}, {3, 2}), 2)
 }
+
+@(test)
+test_largest_rectangle_in_histogram :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, stack.largest_rectangle_in_histogram({7, 1, 7, 2, 2, 4}), 8)
+	testing.expect_value(t, stack.largest_rectangle_in_histogram({1, 3, 7}), 7)
+}
