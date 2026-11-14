@@ -54,6 +54,7 @@ data_structures_and_algorithms/
 │   │
 │   ├── binary_search/
 │   │   ├── binary_search.odin
+│   │   ├── find_minimum_in_rotated_sorted_array.odin
 │   │   ├── koko_eating_bananas.odin
 │   │   ├── search_a_2d_matrix.odin
 │   │   └── problems.md

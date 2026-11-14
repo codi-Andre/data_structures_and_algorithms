@@ -37,3 +37,21 @@ test_koko_eating_bananas :: proc(t: ^testing.T) {
 	testing.expect_value(t, binary_search.min_eating_speed({1, 4, 3, 2}, 9), 2)
 	testing.expect_value(t, binary_search.min_eating_speed({25, 10, 23, 4}, 4), 25)
 }
+
+@(test)
+test_find_minimum_in_rotated_sorted_array :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(
+		t,
+		binary_search.find_minimum_in_rotated_sorted_array({3, 4, 5, 6, 1, 2}),
+		1,
+	)
+	testing.expect_value(
+		t,
+		binary_search.find_minimum_in_rotated_sorted_array({4, 5, 0, 1, 2, 3}),
+		0,
+	)
+	testing.expect_value(t, binary_search.find_minimum_in_rotated_sorted_array({4, 5, 6, 7}), 4)
+	testing.expect_value(t, binary_search.find_minimum_in_rotated_sorted_array({2, 1}), 1)
+}
