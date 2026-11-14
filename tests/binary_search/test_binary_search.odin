@@ -29,3 +29,11 @@ test_search_a_2d_matrix :: proc(t: ^testing.T) {
 		"Expect to not find target number in the 2D matrix",
 	)
 }
+
+@(test)
+test_koko_eating_bananas :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, binary_search.min_eating_speed({1, 4, 3, 2}, 9), 2)
+	testing.expect_value(t, binary_search.min_eating_speed({25, 10, 23, 4}, 4), 25)
+}
