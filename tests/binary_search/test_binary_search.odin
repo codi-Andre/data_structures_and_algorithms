@@ -55,3 +55,23 @@ test_find_minimum_in_rotated_sorted_array :: proc(t: ^testing.T) {
 	testing.expect_value(t, binary_search.find_minimum_in_rotated_sorted_array({4, 5, 6, 7}), 4)
 	testing.expect_value(t, binary_search.find_minimum_in_rotated_sorted_array({2, 1}), 1)
 }
+
+@(test)
+test_search_in_rotated_sorted_array :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, binary_search.search_in_rotated_sorted_array({3, 4, 5, 6, 1, 2}, 1), 4)
+	testing.expect_value(
+		t,
+		binary_search.search_in_rotated_sorted_array({3, 5, 6, 0, 1, 2}, 4),
+		-1,
+	)
+	testing.expect_value(t, binary_search.search_in_rotated_sorted_array({3, 1}, 3), 0)
+	testing.expect_value(
+		t,
+		binary_search.search_in_rotated_sorted_array({4, 5, 6, 7, 0, 1, 2}, 3),
+		-1,
+	)
+	testing.expect_value(t, binary_search.search_in_rotated_sorted_array({1}, 2), -1)
+	testing.expect_value(t, binary_search.search_in_rotated_sorted_array({5, 1, 3}, 5), 0)
+}
