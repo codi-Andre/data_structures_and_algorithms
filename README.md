@@ -56,6 +56,7 @@ data_structures_and_algorithms/
 │   │   ├── binary_search.odin
 │   │   ├── find_minimum_in_rotated_sorted_array.odin
 │   │   ├── koko_eating_bananas.odin
+│   │   ├── median_of_two_sorted_arrays.odin
 │   │   ├── search_a_2d_matrix.odin
 │   │   ├── search_in_rotated_sorted_array.odin
 │   │   ├── time_based_key_value_store.odin

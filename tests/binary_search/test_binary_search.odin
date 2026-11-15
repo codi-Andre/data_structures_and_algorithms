@@ -92,3 +92,11 @@ test_time_based_key_value_store :: proc(t: ^testing.T) {
 	binary_search.time_map_set(&tm, "alice", "sad", 3)
 	testing.expect_value(t, binary_search.time_map_get(&tm, "alice", 3), "sad")
 }
+
+@(test)
+test_median_of_two_sorted_arrays :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	testing.expect_value(t, binary_search.median_of_two_sorted_arrays({1, 2}, {3}), 2.0)
+	testing.expect_value(t, binary_search.median_of_two_sorted_arrays({1, 3}, {2, 4}), 2.5)
+}
