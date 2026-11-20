@@ -58,3 +58,55 @@ test_reverse_linked_list :: proc(t: ^testing.T) {
 	testing.expect_value(t, list[0].val, 0)
 	testing.expect_value(t, list[0].next, &list[1])
 }
+
+@(test)
+test_merge_two_sorted_linked_lists :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	nodes := [dynamic; 6]linked_list.List_Node(int) {
+		{1, nil},
+		{1, nil},
+		{2, nil},
+		{3, nil},
+		{4, nil},
+		{5, nil},
+	}
+	list1: ^linked_list.List_Node(int)
+	list2: ^linked_list.List_Node(int)
+
+	#reverse for &node, i in nodes {
+		if i % 2 == 0 {
+			node.next = list1
+			list1 = &node
+		} else {
+			node.next = list2
+			list2 = &node
+		}
+	}
+
+	matches := 0
+	head := linked_list.merge_two_sorted_linked_lists(list1, list2)
+	for head != nil {
+		if head.val == nodes[matches].val && head.next == nodes[matches].next {
+			matches += 1
+		}
+		head = head.next
+	}
+	testing.expect_value(t, matches, len(nodes))
+
+	clear(&nodes)
+	nodes = {{1, nil}, {2, nil}}
+	list1 = nil
+	list2 = &nodes[0]
+	list2.next = &nodes[1]
+
+	matches = 0
+	head = linked_list.merge_two_sorted_linked_lists(list1, list2)
+	for head != nil {
+		if head.val == nodes[matches].val && head.next == nodes[matches].next {
+			matches += 1
+		}
+		head = head.next
+	}
+	testing.expect_value(t, matches, len(nodes))
+}
