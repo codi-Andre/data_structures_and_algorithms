@@ -32,6 +32,30 @@ test_list_node :: proc(t: ^testing.T) {
 }
 
 @(test)
+test_build_linked_list :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	list := linked_list.build_linked_list({0, 1, 2, 3})
+	defer {
+		for node in list {
+			free(node)
+		}
+		delete(list)
+	}
+
+	matches := 0
+	head := list[0]
+	for head != nil {
+		if head.val == list[matches].val && head.next == list[matches].next {
+			matches += 1
+		}
+		head = head.next
+	}
+	testing.expect_value(t, len(list), 4)
+	testing.expect_value(t, matches, 4)
+}
+
+@(test)
 test_reverse_linked_list :: proc(t: ^testing.T) {
 	list: [4]linked_list.List_Node(int)
 	dummy: ^linked_list.List_Node(int)
