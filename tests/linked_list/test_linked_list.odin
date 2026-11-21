@@ -2,6 +2,7 @@ package test_linked_list
 
 import "../../src/linked_list"
 import "core:log"
+import vm "core:mem/virtual"
 import "core:testing"
 import "core:time"
 
@@ -156,4 +157,55 @@ test_linked_list_cycle_detection :: proc(t: ^testing.T) {
 		linked_list.has_cycle(list2[0]) == false,
 		"Expect linked list to not have cycle",
 	)
+}
+
+@(test)
+test_reorder_linked_list :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	lists_arena: vm.Arena
+	allocator := vm.arena_allocator(&lists_arena)
+	list1 := linked_list.build_linked_list({0, 1, 2, 3, 4, 5, 6}, allocator)
+	list2 := linked_list.build_linked_list({2, 4, 6, 8}, allocator)
+	list3 := linked_list.build_linked_list({2, 4, 6, 8, 10}, allocator)
+	defer vm.arena_destroy(&lists_arena)
+
+	linked_list.reorder_list(list1[0])
+	linked_list.reorder_list(list2[0])
+	linked_list.reorder_list(list3[0])
+
+	matches := 0
+	head := list1[0]
+	values := [dynamic; 7]int{0, 6, 1, 5, 2, 4, 3}
+	for head != nil {
+		if head.val == values[matches] {
+			matches += 1
+		}
+		head = head.next
+	}
+	testing.expect_value(t, matches, len(values))
+
+	clear(&values)
+	matches = 0
+	head = list2[0]
+	values = {2, 8, 4, 6}
+	for head != nil {
+		if head.val == values[matches] {
+			matches += 1
+		}
+		head = head.next
+	}
+	testing.expect_value(t, matches, len(values))
+
+	clear(&values)
+	matches = 0
+	head = list3[0]
+	values = {2, 10, 4, 8, 6}
+	for head != nil {
+		if head.val == values[matches] {
+			matches += 1
+		}
+		head = head.next
+	}
+	testing.expect_value(t, matches, len(values))
 }
