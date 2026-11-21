@@ -131,3 +131,29 @@ test_merge_two_sorted_linked_lists :: proc(t: ^testing.T) {
 	}
 	testing.expect_value(t, matches, len(nodes))
 }
+
+@(test)
+test_linked_list_cycle_detection :: proc(t: ^testing.T) {
+	testing.set_fail_timeout(t, 5 * time.Second)
+
+	list1 := linked_list.build_linked_list({1, 2, 3, 4})
+	list2 := linked_list.build_linked_list({1, 2})
+	defer {
+		for node in list1 {
+			free(node)
+		}
+		delete(list1)
+		for node in list2 {
+			free(node)
+		}
+		delete(list2)
+	}
+	list1[3].next = list1[1]
+
+	testing.expect(t, linked_list.has_cycle(list1[0]) == true, "Expect linked list to have cycle")
+	testing.expect(
+		t,
+		linked_list.has_cycle(list2[0]) == false,
+		"Expect linked list to not have cycle",
+	)
+}
